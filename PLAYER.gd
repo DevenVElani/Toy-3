@@ -15,8 +15,6 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -34,4 +32,5 @@ func _physics_process(delta):
 	move_and_slide()
 func _input(event):
 	if event is InputEventMouseMotion:
-		rotate(-Vector3.UP, event.relative.x * -0.0015)
+		rotate(-Vector3.UP, event.relative.x * 0.0015)
+		$Camera3D.rotate_object_local(-Vector3.RIGHT, event.relative.y * 0.0015)
