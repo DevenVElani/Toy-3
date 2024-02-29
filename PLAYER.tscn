@@ -18,7 +18,3 @@ mesh = SubResource("CapsuleMesh_wrlu6")
 transform = Transform3D(0.98698, 0.0627189, -0.148108, -0.0115121, 0.946023, 0.323895, 0.160428, -0.317973, 0.934428, -0.888336, 1.143, 1.74143)
 fov = 105.5
 script = ExtResource("1_pqga3")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.79653, 0.604599, 0, -0.604599, 0.79653, -0.759495, 1.04017, 1.85484)
-light_energy = 0.852

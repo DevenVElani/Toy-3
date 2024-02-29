@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
-
+@export var newZombieXPos = position[0]
+@export var newZombieZPos = position[2]
 const SPEED = 4
 var hero
 const JUMP_VELOCITY = 4.5
@@ -15,3 +16,5 @@ func _physics_process(delta):
 	$NavigationAgent3D.set_target_position(hero.global_transform.origin)
 	var velocity = ($NavigationAgent3D.get_next_path_position() - transform.origin).normalized() * SPEED * delta
 	move_and_collide(velocity)
+	newZombieXPos = position[0]
+	newZombieZPos = position[2]
